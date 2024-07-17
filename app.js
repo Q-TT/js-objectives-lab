@@ -236,7 +236,11 @@ This method should:
 
 Solve Exercise 14 here:
 */
-
+game.partyCount = function () {
+   return game.party.length
+}
+//testing below
+console.log (game.partyCount())
 
 /*
 Exercise 15
