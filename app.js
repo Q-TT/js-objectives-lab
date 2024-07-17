@@ -165,11 +165,11 @@ game.catchPokemon = function (pokemonObj) {
     game.items[1].quantity --
 }
 //testing below
-game.catchPokemon(pokemon[10])
-game.catchPokemon(pokemon[11])
-game.catchPokemon(pokemon[12])
-console.log (game)
-console.log (game.items)
+// game.catchPokemon(pokemon[10])
+// game.catchPokemon(pokemon[11])
+// game.catchPokemon(pokemon[12])
+// console.log (game)
+// console.log (game.items)
 
 
 /*
@@ -303,7 +303,28 @@ Also, log the `game.items` array to confirm that the pokeball quantity is being 
 
 Solve Exercise 18 here:
 */
+game.collection = []
+game.catchPokemon = function (pokemonObj) {
+    if (game.items[1].quantity > 2) {
+        game.collection.push(pokemonObj)
+        game.items[1].quantity --
+       } 
+    }
+//testing below
+// game.catchPokemon(pokemon[10])
+// game.catchPokemon(pokemon[11])
+// game.catchPokemon(pokemon[12])
+// game.catchPokemon(pokemon[10])
+// game.catchPokemon(pokemon[11])
+// game.catchPokemon(pokemon[10])
+// game.catchPokemon(pokemon[11])
+// game.catchPokemon(pokemon[12])
+// game.catchPokemon(pokemon[10])
+// game.catchPokemon(pokemon[11])
 
+// console.log(game)
+// console.log (game.collection)
+// console.log (game.items)
 
 
 /*
