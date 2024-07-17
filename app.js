@@ -259,6 +259,7 @@ function completeDifficulity (x,y) {
     }
     return x
 }
+//testing below
 console.log(completeDifficulity(game.gyms, 8))
 
 
@@ -269,4 +270,4 @@ Exercise 16
 
 Solve Exercise 16 here:
 */
-
+console.log(game)
