@@ -250,6 +250,16 @@ Exercise 15
 Solve Exercise 15 here:
 */
 
+//! using function to solve this task, from here I can go back the use this fuction to solve task 11, just calling the function with y=6. As function has hoisting, I can call it everywhere!
+function completeDifficulity (x,y) {
+    for (i=0; i<x.length; i++) {
+        if (x[i].difficulty < y) {
+            x[i].completed = true
+        }
+    }
+    return x
+}
+console.log(completeDifficulity(game.gyms, 8))
 
 
 /*
