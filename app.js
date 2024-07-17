@@ -116,6 +116,11 @@ Exercise 9
 
 Solve Exercise 9 here:
 */
+for (i=0; i<pokemon.length; i++) {
+    if (pokemon[i].starter === true) {
+        console.log(pokemon[i].name)
+    }
+}
 
 
 /*
