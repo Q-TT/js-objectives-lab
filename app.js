@@ -33,7 +33,7 @@ Exercise 3
 Solve Exercise 3 here:
 */
 game.difficulty = "Easy"
-console.log(game)
+// console.log(game)
 
 /*
 Exercise 4
@@ -44,7 +44,7 @@ Exercise 4
 Solve Exercise 4 here:
 */
 game.party.push(pokemon[0])
-console.log(game)
+// console.log(game)
 
 /*
 Exercise 5
@@ -54,8 +54,8 @@ Exercise 5
 
 Solve Exercise 5 here:
 */
-game.party.push(pokemon[1], pokemon[3], pokemon[6])
-console.log(game)
+game.party.push(pokemon[3], pokemon[6], pokemon[18])
+// console.log(game)
 
 /*
 Exercise 6
@@ -89,7 +89,13 @@ More Hints: The existing starter Pokemon will be *replaced* in your party with t
 
 Solve Exercise 7 here:
 */
-
+for (i = 0; i < game.party.length; i++) {
+    if (game.party[i].starter === true) {
+        game.party.splice(i, 1, pokemon[game.party[i].number])
+    }
+}
+console.log (game.party)
+//! please notice pokeman data start from number:1, not 0
 
 /*
 Exercise 8
