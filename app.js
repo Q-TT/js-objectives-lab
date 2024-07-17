@@ -337,7 +337,30 @@ Also, ensure that the Pokemon isn't added to the `game.party` or the `game.colle
 
 Solve Exercise 19 here:
 */
+game.collection = []
+game.catchPokemon = function (pokemonObj) {
+    if (game.items[1].quantity > 0) {
+        game.collection.push(pokemonObj)
+        game.items[1].quantity --
+       } else {
+        game.items[1].quantity = "thers is no pokeball!!"
+       }
+    }
+//testing below
+game.catchPokemon(pokemon[10])
+game.catchPokemon(pokemon[11])
+game.catchPokemon(pokemon[12])
+game.catchPokemon(pokemon[10])
+game.catchPokemon(pokemon[11])
+game.catchPokemon(pokemon[10])
+game.catchPokemon(pokemon[11])
+game.catchPokemon(pokemon[12])
+game.catchPokemon(pokemon[10])
+game.catchPokemon(pokemon[11])
 
+console.log(game)
+console.log (game.collection)
+console.log (game.items)
 
 
 /*
