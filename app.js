@@ -33,6 +33,7 @@ Exercise 3
 Solve Exercise 3 here:
 */
 game.difficulty = "Easy"
+//testing below
 // console.log(game)
 
 /*
@@ -44,6 +45,7 @@ Exercise 4
 Solve Exercise 4 here:
 */
 game.party.push(pokemon[0])
+//testing below
 // console.log(game)
 
 /*
@@ -55,6 +57,7 @@ Exercise 5
 Solve Exercise 5 here:
 */
 game.party.push(pokemon[3], pokemon[6], pokemon[18])
+//testing below
 // console.log(game)
 
 /*
@@ -70,6 +73,7 @@ for (i=0; i<game.gyms.length; i++) {
         game.gyms[i].completed = true
     }
 }
+//testing below
 // console.log (game)
 
 
@@ -94,6 +98,7 @@ for (i = 0; i < game.party.length; i++) {
         game.party.splice(i, 1, pokemon[game.party[i].number])
     }
 }
+//testing below
 // console.log (game.party)
 //! please notice pokeman data start from number:1, not 0
 
@@ -138,6 +143,7 @@ Solve Exercise 10 here:
 game.catchPokemon = function (pokemonObj) {
     game.party.push(pokemonObj)
 }
+//testing below
 // game.catchPokemon(pokemon[10])
 // console.log (game.party)
 
@@ -158,6 +164,7 @@ game.catchPokemon = function (pokemonObj) {
     game.party.push(pokemonObj)
     game.items[1].quantity --
 }
+//testing below
 game.catchPokemon(pokemon[10])
 game.catchPokemon(pokemon[11])
 game.catchPokemon(pokemon[12])
@@ -172,6 +179,13 @@ Exercise 12
 
 Solve Exercise 12 here:
 */
+for (i=0; i<game.gyms.length; i++) {
+    if (game.gyms[i].difficulty < 6) {
+        game.gyms[i].completed = true
+    }
+}
+//testing below
+console.log(game.gyms)
 
 
 /*
