@@ -70,7 +70,7 @@ for (i=0; i<game.gyms.length; i++) {
         game.gyms[i].completed = true
     }
 }
-console.log (game)
+// console.log (game)
 
 
 /*
@@ -94,7 +94,7 @@ for (i = 0; i < game.party.length; i++) {
         game.party.splice(i, 1, pokemon[game.party[i].number])
     }
 }
-console.log (game.party)
+// console.log (game.party)
 //! please notice pokeman data start from number:1, not 0
 
 /*
@@ -104,7 +104,9 @@ Exercise 8
 
 Solve Exercise 8 here:
 */
-
+for (i=0; i<game.party.length; i++) {
+    console.log(game.party[i].name)
+}
 
 /*
 Exercise 9
