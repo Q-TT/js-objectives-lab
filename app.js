@@ -210,6 +210,19 @@ For example, if five gym objects have a value of `true` on their `completed` pro
 
 Solve Exercise 13 here:
 */
+game.gymStatus = function () {
+    const gymTally = {completed: 0, incomplete: 0}
+    for (i=0; i<game.gyms.length; i++) {
+        if (game.gyms[i].completed === true) {
+            gymTally.completed ++
+        } else if (game.gyms[i].completed === false) {
+            gymTally.incomplete ++
+        }
+    }
+    console.log(gymTally)
+}
+//testig below
+game.gymStatus()
 
 
 /*
