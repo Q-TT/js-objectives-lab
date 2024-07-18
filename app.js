@@ -185,7 +185,7 @@ for (i=0; i<game.gyms.length; i++) {
     }
 }
 //testing below
-console.log(game.gyms)
+// console.log(game.gyms)
 
 
 /*
@@ -222,7 +222,7 @@ game.gymStatus = function () {
     console.log(gymTally)
 }
 //testig below
-game.gymStatus()
+// game.gymStatus()
 
 
 /*
@@ -240,7 +240,7 @@ game.partyCount = function () {
    return game.party.length
 }
 //testing below
-console.log (game.partyCount())
+// console.log (game.partyCount())
 
 /*
 Exercise 15
@@ -260,7 +260,7 @@ function completeDifficulity (x,y) {
     return x
 }
 //testing below
-console.log(completeDifficulity(game.gyms, 8))
+// console.log(completeDifficulity(game.gyms, 8))
 
 
 /*
@@ -420,20 +420,20 @@ game.catchPokemon = function (pokemonName) {
   }
 }
 //testing below
-game.catchPokemon("Bulbasaur")
-game.catchPokemon("Bulbasaur")
-game.catchPokemon("Bulbasaur")
-game.catchPokemon("Bulbasaur")
-game.catchPokemon("Bulbasaur")
-game.catchPokemon("Bulbasaur")
-game.catchPokemon("Bulbasaur")
-game.catchPokemon("Bulbasaur")
-game.catchPokemon("Bulbasaur")
-console.log (game.catchPokemon("akakakka"))
+// game.catchPokemon("Bulbasaur")
+// game.catchPokemon("Bulbasaur")
+// game.catchPokemon("Bulbasaur")
+// game.catchPokemon("Bulbasaur")
+// game.catchPokemon("Bulbasaur")
+// game.catchPokemon("Bulbasaur")
+// game.catchPokemon("Bulbasaur")
+// game.catchPokemon("Bulbasaur")
+// game.catchPokemon("Bulbasaur")
+// console.log (game.catchPokemon("akakakka"))
 
-console.log(game)
-console.log (game.collection)
-console.log (game.items)
+// console.log(game)
+// console.log (game.collection)
+// console.log (game.items)
 
 
 /*
@@ -461,6 +461,36 @@ Log the object when it's constructed.
 
 Solve Exercise 21 here:
 */
+
+//! js mimic hashmap data structure: one key can only be one key
+const dynamicObj = {};
+let pokemonType = "";
+
+for (i=0; i<pokemon.length; i++) {
+  if (dynamicObj.hasOwnProperty(pokemon[i].type)) {
+    dynamicObj[pokemon[i].type].push(pokemon[i])
+
+  } else {
+    dynamicObj[pokemon[i].type] = [pokemon[i]]
+  }
+}
+
+//! below use "in" to write the code
+//! "in" check if sth exist in an object as a KEY
+//! "objest.values" will return all the values as an array
+// for (i=0; i<pokemon.length; i++) {
+//   if (pokemon[i].type in dynamicObj) {
+//     dynamicObj[pokemon[i].type].push(pokemon[i])
+
+//   } else {
+//     dynamicObj[pokemon[i].type] = [pokemon[i]]
+//   }
+// }
+
+//testing below
+console.log(dynamicObj, "dynamicobj")
+
+
 
 
 
