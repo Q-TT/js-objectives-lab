@@ -288,7 +288,6 @@ console.log(game.party)
 /*
 Exercise 18
 Add a new property to the `game` object called `collection` and initialize its value to an empty array.
-
 Copy the `catchPokemon` method you wrote in Exercise Twelve and paste it below. Modify it so that:
   - Ensure that no more than six Pokemon can be in the party at any time. 
     Excess Pokemon should be placed in the `game.collection` array.
@@ -310,6 +309,7 @@ game.catchPokemon = function (pokemonObj) {
         game.items[1].quantity --
        } else {
         game.collection.push(pokemonObj)
+        game.items[1].quantity --
        }
     }
 //testing below
@@ -341,40 +341,36 @@ Also, ensure that the Pokemon isn't added to the `game.party` or the `game.colle
 
 Solve Exercise 19 here:
 */
-// game.collection = []
-// game.catchPokemon = function (pokemonObj) {
-//     if (game.party.length < 6) {
-//         game.party.push(pokemonObj)
-//         game.items[1].quantity --
-//        } else {
-//         game.collection.push(pokemonObj)
-//        }
-//     }
+game.collection = []
+game.catchPokemon = function (pokemonObj) {
+  if (game.items[1].quantity > 0) {
+      if (game.party.length < 6) {
+      game.party.push(pokemonObj)
+      game.items[1].quantity --
+    } else {
+      game.collection.push(pokemonObj)
+      game.items[1].quantity --
+    }
+  } else {
+    game.items[1].quantity = "thers is no pokeball!!"
+  }
+}
 
-// game.catchPokemon = function (pokemonObj) {
-//     if (game.items[1].quantity > 0) {
-//         game.party.push(pokemonObj)
-//         game.items[1].quantity --
-//        } else {
-//         game.collection.push(pokemonObj)
-//         game.items[1].quantity = "thers is no pokeball!!"
-//        }
-//     }
-// //testing below
-// game.catchPokemon(pokemon[10])
-// game.catchPokemon(pokemon[11])
-// game.catchPokemon(pokemon[12])
-// game.catchPokemon(pokemon[10])
-// game.catchPokemon(pokemon[11])
-// game.catchPokemon(pokemon[10])
-// game.catchPokemon(pokemon[11])
+//testing below
+game.catchPokemon(pokemon[10])
+game.catchPokemon(pokemon[11])
+game.catchPokemon(pokemon[12])
+game.catchPokemon(pokemon[10])
+game.catchPokemon(pokemon[11])
+game.catchPokemon(pokemon[10])
+game.catchPokemon(pokemon[11])
 // game.catchPokemon(pokemon[12])
 // game.catchPokemon(pokemon[10])
 // game.catchPokemon(pokemon[11])
 
-// console.log(game)
-// console.log (game.collection)
-// console.log (game.items)
+console.log(game)
+console.log (game.collection)
+console.log (game.items)
 
 
 /*
