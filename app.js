@@ -356,21 +356,21 @@ game.catchPokemon = function (pokemonObj) {
   }
 }
 
-//testing below
-game.catchPokemon(pokemon[10])
-game.catchPokemon(pokemon[11])
-game.catchPokemon(pokemon[12])
-game.catchPokemon(pokemon[10])
-game.catchPokemon(pokemon[11])
-game.catchPokemon(pokemon[10])
-game.catchPokemon(pokemon[11])
+// testing below
+// game.catchPokemon(pokemon[10])
+// game.catchPokemon(pokemon[11])
+// game.catchPokemon(pokemon[12])
+// game.catchPokemon(pokemon[10])
+// game.catchPokemon(pokemon[11])
+// game.catchPokemon(pokemon[10])
+// game.catchPokemon(pokemon[11])
 // game.catchPokemon(pokemon[12])
 // game.catchPokemon(pokemon[10])
 // game.catchPokemon(pokemon[11])
 
-console.log(game)
-console.log (game.collection)
-console.log (game.items)
+// console.log(game)
+// console.log (game.collection)
+// console.log (game.items)
 
 
 /*
@@ -383,7 +383,57 @@ If there is not a match, then return a string noting that the selected Pokemon d
 
 Solve Exercise 20 here:
 */
+game.collection = []
+game.catchPokemon = function (pokemonName) {
+  
+  let foundPokemon;
 
+  //! use for loop to write it
+  for (i=0; i<pokemon.length; i++) {
+    if (pokemonName === pokemon[i].name) {
+      foundPokemon = pokemon[i]
+    }
+  }
+
+  //! filter function for array
+  // pokemon.filter((item) => { if (item.name === pokemonName) foundPokemon=item })
+
+  //! ternary operater 
+  //! syntax: blooean expression ? true evaluation : false evaluation
+  // pokemon.filter((item) => item.name === pokemonName ? foundPokemon = item : null)
+  
+  
+  if (foundPokemon) {
+    if (game.items[1].quantity > 0) {
+        if (game.party.length < 6) {
+          game.party.push(foundPokemon)
+          game.items[1].quantity --
+        } else {
+          game.collection.push(foundPokemon)
+          game.items[1].quantity --
+        }
+    } else {
+      game.items[1].quantity = "thers is no pokeball!!"
+    }
+  } else {
+    return "Selected Pokemon does not exist!"
+  }
+}
+//testing below
+game.catchPokemon("Bulbasaur")
+game.catchPokemon("Bulbasaur")
+game.catchPokemon("Bulbasaur")
+game.catchPokemon("Bulbasaur")
+game.catchPokemon("Bulbasaur")
+game.catchPokemon("Bulbasaur")
+game.catchPokemon("Bulbasaur")
+game.catchPokemon("Bulbasaur")
+game.catchPokemon("Bulbasaur")
+console.log (game.catchPokemon("akakakka"))
+
+console.log(game)
+console.log (game.collection)
+console.log (game.items)
 
 
 /*
